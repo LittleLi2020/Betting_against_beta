@@ -50,7 +50,7 @@ Excess_BAB=BAB['BAB'].mean()
 Excess_BAB_t=BAB['BAB'].mean()/(BAB['BAB'].std()/math.sqrt(BAB['date'].count()))
 
 
-#计算分组的beta取值(EXCHCD要求数值是3，代表NYSE的上市公司)
+#计算分组的beta取值(EXCHCD要求数值是1，代表NYSE的上市公司)
 stock['date']=stock['year']*100+stock['month']
 stock.drop(columns=['year','month'],inplace=True)
 rank=stock[stock['EXCHCD']==1]
